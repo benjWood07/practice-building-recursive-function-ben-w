@@ -10,13 +10,12 @@ of the string (recursive case).
 3. Test the function with various string inputs to verify its correctness.
 */
 function reverseString(str) {
-    if (str.length <= 1) {                                                      // Base case: if string has only one character or is empty, return it as is
+    if (str.length <= 1) {                                        // Base case: if string has only one character or is empty, return it as is
         return str;
     }
-    return str[str.length - 1] + reverseString(str.slice(0, -1));             // Recursive case: take the last character and add it to the reversed version of the remaining string 
+    return str[str.length - 1] + reverseString(str.slice(0, -1)); // Recursive case: take the last character and add it to the reversed version of the remaining string 
 }
-
-console.log("Testing reverseString function:");                                   // Test the function with various inputs
+// Test the function with various inputs
 console.log('reverseString("a") =', reverseString("a"));                          // Test Single character
 console.log('reverseString("my") =', reverseString("my"));                        // Test Two characters
 console.log('reverseString("today") =', reverseString("today"));                  // Test Regular word
